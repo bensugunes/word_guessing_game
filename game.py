@@ -13,6 +13,10 @@ while attempts > 0:
     print('\nCurrent word: ' + ' '.join(guessed_word))
 
     guess = input('Guess a letter: ').lower()
+
+    if len(guess) != 1 or not guess.isalpha():
+        print('Invalid output. Please guess a single letter.')
+        continue
    
     if guess in word:
         for i in range(len(word)):
